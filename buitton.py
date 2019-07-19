@@ -4,6 +4,7 @@ from pygame.mixer import Sound
 from gpiozero import Button
 from signal import pause
 
+pygame.mixer.pre_init(48000, -16, 1, 4096)
 pygame.init()
 pygame.mixer.init()
 
