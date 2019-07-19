@@ -11,8 +11,11 @@ def play(x):
     return lambda: do_play(x)
 
 def do_play(x):
-    print("sound " + str(x))
-    pygame.mixer.music.load("/home/pi/newSounds/" + str(x) + ".wav")
+    print("Pressed " + str(x))
+    path = "/home/pi/newSounds/" + str(x) + ".wav")
+    print("Playing " + path)
+
+    pygame.mixer.music.load(path)
     pygame.mixer.music.play(0)
 
 def stop():
