@@ -16,7 +16,11 @@ def do_play(x):
     print("Playing " + path)
 
     pygame.mixer.music.load(path)
-    pygame.mixer.music.play(0)
+
+    while pygame.mixer.music.get_busy():
+        pass
+
+    pygame.mixer.music.play(2)
 
 def stop():
     return lambda: do_stop()
