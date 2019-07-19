@@ -12,7 +12,7 @@ def play(x):
 
 def do_play(x):
     print("Pressed " + str(x))
-    path = "/home/pi/sounds/" + str(x) + ".wav")
+    path = "/home/pi/sounds/" + str(x) + ".wav"
     print("Playing " + path)
 
     pygame.mixer.music.load(path)
