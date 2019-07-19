@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [[ $USER != "pi" ]]; then
+  echo "This is meant to run on a Raspberry PI"
+  exit 1
+fi
+
+sudo cp buitton.service /etc/systemd/system/
+sudo systemctl enable buitton.service
+sudo systemctl start buitton.service
