@@ -20,7 +20,8 @@ def do_play(x):
     while pygame.mixer.music.get_busy():
         pass
 
-    pygame.mixer.music.play(2)
+    pygame.mixer.music.play(0)
+    pygame.mixer.music.play(0)
 
 def stop():
     return lambda: do_stop()
